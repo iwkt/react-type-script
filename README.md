@@ -4,13 +4,13 @@
 
 今回は react-typescript というアプリ名で作成した
 
-### `npx create-react-app react-typescript --template typescript`
+`npx create-react-app react-typescript --template typescript`
 
 ## ESLint 導入
 
 ### ライブラリをインストール
 
-### `yarn add -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+`yarn add -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
 
 ### .eslintrc.js を作成
 
@@ -46,7 +46,7 @@
 
 ### ライブラリをインストール
 
-### `yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`
+`yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`
 
 ### `npm run build`
 
