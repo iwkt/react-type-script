@@ -1,23 +1,52 @@
-# Getting Started with Create React App
+# React TypeScript eslint prettier 環境構築
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## アプリの作成
 
-## Available Scripts
+今回は react-typescript というアプリ名で作成した
 
-In the project directory, you can run:
+### `npx create-react-app react-typescript --template typescript`
 
-### `npm start`
+## ESLint 導入
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### ライブラリをインストール
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `yarn add -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
 
-### `npm test`
+### .eslintrc.js を作成
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    //    "standard",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
+}
+
+```
+
+## Prettier 導入
+
+### ライブラリをインストール
+
+### `yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`
 
 ### `npm run build`
 
